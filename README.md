@@ -21,14 +21,7 @@ pip install Pillow
 
 ## Workflow
 
-```mermaid
-graph LR
-    A[User] -->|Provides Image Path| B[Validate File]
-    B --> C[Extract File Properties]
-    B --> D[Extract EXIF Data]
-    C --> E[Print Report]
-    D --> E[Print Report]
-```
+![Workflow Diagram](diagram.png)
 
 ## Sample Output
 ```
