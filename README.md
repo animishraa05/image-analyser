@@ -17,13 +17,13 @@ python image_analyzer.py <path_to_image>
 
 ## System Workflow / Use Case
 ```mermaid
-flowchart LR
-    User([User])
+graph LR
+    User(User)
     subgraph IA [Image Analyzer]
-        UC1([Validate File Path])
-        UC2([Extract Basic Properties])
-        UC3([Extract EXIF Metadata])
-        UC4([Generate Output Report])
+        UC1(Validate File Path)
+        UC2(Extract Basic Properties)
+        UC3(Extract EXIF Metadata)
+        UC4(Generate Output Report)
     end
     
     User -->|Provides Image| UC1
