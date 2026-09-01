@@ -19,7 +19,7 @@ python image_analyzer.py <path_to_image>
 ```mermaid
 flowchart LR
     User([User])
-    subgraph Image Analyzer
+    subgraph IA [Image Analyzer]
         UC1([Validate File Path])
         UC2([Extract Basic Properties])
         UC3([Extract EXIF Metadata])
