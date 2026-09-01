@@ -33,3 +33,23 @@ flowchart LR
     UC3 --> UC4
     UC4 -->|View Metadata| User
 ```
+
+## Sample Output
+```text
+================================
+IMAGE METADATA REPORT
+================================
+File Name       : proper_image.jpg
+File Size       : 273.05 KB
+File Format     : JPEG
+Width           : 1600 px
+Height          : 1598 px
+Resolution      : (72, 72)
+Color Mode      : RGB
+
+EXIF Metadata
+-------------------------------
+Software        : Adobe Photoshop CS4 Windows
+Orientation     : 1
+Date Taken      : 2009:01:31 22:25:45
+```
