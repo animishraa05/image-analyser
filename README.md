@@ -1,10 +1,9 @@
-# Lab 1: Image Analyzer
+# Lab 1 — Image Analyzer
 
-This script reads an image file and extracts metadata, including standard file properties (size, format, dimensions) and EXIF data (camera make/model, date taken, orientation, etc.) if available.
+Reads an image file and extracts metadata including file properties (size, format, dimensions) and EXIF data (camera, date, orientation).
 
 ## Supported Formats
-- Minimum: JPG/JPEG, PNG
-- Bonus: TIFF, WEBP, BMP
+- JPG / JPEG, PNG, TIFF, WEBP, BMP
 
 ## Usage
 ```bash
@@ -12,34 +11,31 @@ python image_analyzer.py <path_to_image>
 ```
 
 ## Requirements
-- Python 3
-- Pillow (`pip install Pillow`)
+```
+pip install Pillow
+```
 
-## System Workflow / Use Case
+## Sample File Used
+
+![sample](sample.jpg)
+
+## Workflow
+
 ```mermaid
 graph LR
-    User(User)
-    subgraph IA [Image Analyzer]
-        UC1(Validate File Path)
-        UC2(Extract Basic Properties)
-        UC3(Extract EXIF Metadata)
-        UC4(Generate Output Report)
-    end
-    
-    User -->|Provides Image| UC1
-    UC1 --> UC2
-    UC1 --> UC3
-    UC2 --> UC4
-    UC3 --> UC4
-    UC4 -->|View Metadata| User
+    A[User] -->|Provides Image Path| B[Validate File]
+    B --> C[Extract File Properties]
+    B --> D[Extract EXIF Data]
+    C --> E[Print Report]
+    D --> E[Print Report]
 ```
 
 ## Sample Output
-```text
+```
 ================================
 IMAGE METADATA REPORT
 ================================
-File Name       : proper_image.jpg
+File Name       : sample.jpg
 File Size       : 273.05 KB
 File Format     : JPEG
 Width           : 1600 px
